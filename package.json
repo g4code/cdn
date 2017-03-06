@@ -1,0 +1,35 @@
+{
+  "name": "cdn",
+  "version": "0.0.1",
+  "description": "cdn node.js library",
+  "main": "./lib/cdn.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/g4code/cdn"
+  },
+  "keywords": [
+    "cdn"
+  ],
+  "author": "Drasko Gomboc <drasko.gomboc@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/g4code/cdn/issues"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "chai": "*"
+  },
+  "dependencies": {
+    "evento": "*",
+    "underscore": "*"
+  },
+  "bin": {
+    "cdn": "./bin/cdn.js"
+  }
+}
