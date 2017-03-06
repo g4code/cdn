@@ -9,11 +9,11 @@ class ContentMapTest extends PHPUnit_Framework_TestCase
     {
         $this->assertEquals(
             [
-                ContentConstants::CSS_JS_LOCATION           => 'css',
-                ContentConstants::FONT_LOCATION             => 'font',
-                ContentConstants::IMAGE_ICON_LOCATION       => 'image',
-                ContentConstants::IMAGE_USER_LOCATION       => 'profile',
-                ContentConstants::VIDEO_LOCATION            => 'video'
+                ContentConstants::CSS_JS_LOCATION           => '/css',
+                ContentConstants::FONT_LOCATION             => '/font',
+                ContentConstants::IMAGE_ICON_LOCATION       => '/image',
+                ContentConstants::IMAGE_USER_LOCATION       => '/profile',
+                ContentConstants::VIDEO_LOCATION            => '/video'
             ],
             \G4\Cdn\ContentMap::getMap($this->contentLocationMock())
         );

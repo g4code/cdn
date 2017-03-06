@@ -17,13 +17,9 @@ self-update:
 	@ /bin/echo -e "${TITLE} running composer self update" \
 	&& php composer.phar self-update"
 
-test:
-	@/bin/echo -e "${TITLE} testing suite started..." \
-	&& vendor/phpunit/phpunit/composer/bin/phpunit -c test/phpunit.xml
-
-test-group:
-	@/bin/echo -e "${TITLE} testing suite started..." \
-	&& vendor/phpunit/phpunit/composer/bin/phpunit -c tests/phpunit.xml --group $(g) \
+unit-tests:
+	@/bin/echo -e "${TITLE} unit test suite started..." \
+	&& ./vendor/bin/phpunit -c tests/unit/phpunit.xml --coverage-html tests/unit/coverage
 
 update:
 	@/bin/echo -e "${TITLE} update dependencies..." \
