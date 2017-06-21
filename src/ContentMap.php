@@ -12,7 +12,8 @@ class ContentMap
             ContentConstants::FONT_LOCATION             => $aContentLocation->getFontLocation(),
             ContentConstants::IMAGE_ICON_LOCATION       => $aContentLocation->getIconImageLocation(),
             ContentConstants::IMAGE_USER_LOCATION       => $aContentLocation->getProfileImageLocation(),
-            ContentConstants::VIDEO_LOCATION            => $aContentLocation->getVideoLocation()
+            ContentConstants::VIDEO_LOCATION            => $aContentLocation->getVideoLocation(),
+            ContentConstants::CDN_LOCATION              => $aContentLocation->getCdnLocation()
         ];
     }
 

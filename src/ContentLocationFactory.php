@@ -12,7 +12,8 @@ class ContentLocationFactory
             self::getData($data, ContentConstants::FONT_LOCATION),
             self::getData($data, ContentConstants::IMAGE_ICON_LOCATION),
             self::getData($data, ContentConstants::IMAGE_USER_LOCATION),
-            self::getData($data, ContentConstants::VIDEO_LOCATION)
+            self::getData($data, ContentConstants::VIDEO_LOCATION),
+            self::getData($data, ContentConstants::CDN_LOCATION)
         );
     }
 

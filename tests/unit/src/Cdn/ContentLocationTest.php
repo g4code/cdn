@@ -8,6 +8,7 @@ class ContentLocationTest extends PHPUnit_Framework_TestCase
     private $iconImageLocation      = 'icon-image/location';
     private $profileImageLocation   = 'profile-image/location';
     private $videoLocation          = 'video/location';
+    private $cdnLocation            = '/cdn';
 
    public function testGetCssJsLocation()
    {
@@ -49,6 +50,14 @@ class ContentLocationTest extends PHPUnit_Framework_TestCase
        );
    }
 
+   public function testCdnLocation()
+   {
+       $this->assertEquals(
+           $this->cdnLocation,
+           $this->contentLocationFactory()->getCdnLocation()
+       );
+   }
+
    private function contentLocationFactory()
    {
        return new \G4\Cdn\ContentLocation(
@@ -56,7 +65,8 @@ class ContentLocationTest extends PHPUnit_Framework_TestCase
            $this->fontLocation,
            $this->iconImageLocation,
            $this->profileImageLocation,
-           $this->videoLocation
+           $this->videoLocation,
+           $this->cdnLocation
        );
    }
 

@@ -15,13 +15,21 @@ class ContentLocation
 
     private $videoLocation;
 
-    public function __construct($cssJsLocation, $fontLocation, $iconImageLocation, $profileImageLocation, $videoLocation)
+    private $cdnLocation;
+
+    public function __construct($cssJsLocation, $fontLocation, $iconImageLocation, $profileImageLocation, $videoLocation, $cdnLocation)
     {
-        $this->cssJsLocation = $cssJsLocation;
-        $this->fontLocation = $fontLocation;
-        $this->iconImageLocation = $iconImageLocation;
+        $this->cssJsLocation        = $cssJsLocation;
+        $this->fontLocation         = $fontLocation;
+        $this->iconImageLocation    = $iconImageLocation;
         $this->profileImageLocation = $profileImageLocation;
-        $this->videoLocation = $videoLocation;
+        $this->videoLocation        = $videoLocation;
+        $this->cdnLocation          = $cdnLocation;
+    }
+
+    public function getCdnLocation()
+    {
+        return $this->cdnLocation;
     }
 
     public function getCssJsLocation()
