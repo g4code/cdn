@@ -17,9 +17,9 @@ class ContentLocation
 
     private $cdnVideoLocation;
 
-    private $cdnImageIconLocation;
+    private $cdnImageLocation;
 
-    public function __construct($cssJsLocation, $fontLocation, $iconImageLocation, $profileImageLocation, $videoLocation, $cdnVideoLocation, $cdnImageIconLocation)
+    public function __construct($cssJsLocation, $fontLocation, $iconImageLocation, $profileImageLocation, $videoLocation, $cdnVideoLocation, $cdnImageLocation)
     {
         $this->cssJsLocation        = $cssJsLocation;
         $this->fontLocation         = $fontLocation;
@@ -27,7 +27,7 @@ class ContentLocation
         $this->profileImageLocation = $profileImageLocation;
         $this->videoLocation        = $videoLocation;
         $this->cdnVideoLocation     = $cdnVideoLocation;
-        $this->cdnImageIconLocation = $cdnImageIconLocation;
+        $this->cdnImageLocation     = $cdnImageLocation;
     }
 
     public function getCssJsLocation()
@@ -60,9 +60,9 @@ class ContentLocation
         return $this->cdnVideoLocation;
     }
 
-    public function getCdnImageIconLocation()
+    public function getCdnImageLocation()
     {
-        return $this->cdnImageIconLocation;
+        return $this->cdnImageLocation;
     }
 
 }
