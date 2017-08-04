@@ -14,7 +14,8 @@ class ContentMap
             ContentConstants::IMAGE_USER_LOCATION       => $aContentLocation->getProfileImageLocation(),
             ContentConstants::VIDEO_LOCATION            => $aContentLocation->getVideoLocation(),
             ContentConstants::CDN_VIDEO_LOCATION        => $aContentLocation->getCdnVideoLocation(),
-            ContentConstants::CDN_IMAGE_LOCATION        => $aContentLocation->getCdnImageLocation()
+            ContentConstants::CDN_IMAGE_LOCATION        => $aContentLocation->getCdnImageLocation(),
+            ContentConstants::CDN_GLOBAL_LOCATION       => $aContentLocation->getGlobalPath()
         ];
     }
 

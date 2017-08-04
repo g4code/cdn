@@ -15,7 +15,8 @@ class ContentMapTest extends PHPUnit_Framework_TestCase
                 ContentConstants::IMAGE_USER_LOCATION       => '/profile',
                 ContentConstants::VIDEO_LOCATION            => '/video',
                 ContentConstants::CDN_VIDEO_LOCATION        => '/cdn/video',
-                ContentConstants::CDN_IMAGE_LOCATION        => '/cdn/image'
+                ContentConstants::CDN_IMAGE_LOCATION        => '/cdn/image',
+                ContentConstants::CDN_GLOBAL_LOCATION       => '/cdn'
             ],
             \G4\Cdn\ContentMap::getMap($this->contentLocationMock())
         );
@@ -33,6 +34,7 @@ class ContentMapTest extends PHPUnit_Framework_TestCase
         $mock->expects($this->once())->method('getVideoLocation')->willReturn('/video');
         $mock->expects($this->once())->method('getCdnVideoLocation')->willReturn('/cdn/video');
         $mock->expects($this->once())->method('getCdnImageLocation')->willReturn('/cdn/image');
+        $mock->expects($this->once())->method('getGlobalPath')->willReturn('/cdn');
         return $mock;
     }
 

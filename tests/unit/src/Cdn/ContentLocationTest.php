@@ -10,6 +10,7 @@ class ContentLocationTest extends PHPUnit_Framework_TestCase
     private $videoLocation          = 'video/location';
     private $cdnVideoLocation       = '/cdn/video';
     private $cdnImageLocation       = '/cdn/image';
+    private $globalPath             = '/cdn';
 
    public function testGetCssJsLocation()
    {
@@ -67,6 +68,14 @@ class ContentLocationTest extends PHPUnit_Framework_TestCase
         );
     }
 
+    public function testGlobalPath()
+    {
+        $this->assertEquals(
+            $this->globalPath,
+            $this->contentLocationFactory()->getGlobalPath()
+        );
+    }
+
    private function contentLocationFactory()
    {
        return new \G4\Cdn\ContentLocation(
@@ -76,7 +85,8 @@ class ContentLocationTest extends PHPUnit_Framework_TestCase
            $this->profileImageLocation,
            $this->videoLocation,
            $this->cdnVideoLocation,
-           $this->cdnImageLocation
+           $this->cdnImageLocation,
+           $this->globalPath
        );
    }
 

@@ -12,5 +12,6 @@ class ContentConstants
     const VIDEO_LOCATION            = 'content_video_location';
     const CDN_IMAGE_LOCATION        = 'content_cdn_image_location';
     const CDN_VIDEO_LOCATION        = 'content_cdn_video_location';
+    const CDN_GLOBAL_LOCATION       = 'content_cdn_global_path';
 
 }
