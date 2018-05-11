@@ -19,18 +19,21 @@ class ContentLocation
 
     private $cdnImageLocation;
 
+    private $cdnImageMembersLocation;
+
     private $globalPath;
 
-    public function __construct($cssJsLocation, $fontLocation, $iconImageLocation, $profileImageLocation, $videoLocation, $cdnVideoLocation, $cdnImageLocation, $globalPath)
+    public function __construct($cssJsLocation, $fontLocation, $iconImageLocation, $profileImageLocation, $videoLocation, $cdnVideoLocation, $cdnImageLocation,  $cdnImageMembersLocation, $globalPath)
     {
-        $this->cssJsLocation        = $cssJsLocation;
-        $this->fontLocation         = $fontLocation;
-        $this->iconImageLocation    = $iconImageLocation;
-        $this->profileImageLocation = $profileImageLocation;
-        $this->videoLocation        = $videoLocation;
-        $this->cdnVideoLocation     = $cdnVideoLocation;
-        $this->cdnImageLocation     = $cdnImageLocation;
-        $this->globalPath           = $globalPath;
+        $this->cssJsLocation           = $cssJsLocation;
+        $this->fontLocation            = $fontLocation;
+        $this->iconImageLocation       = $iconImageLocation;
+        $this->profileImageLocation    = $profileImageLocation;
+        $this->videoLocation           = $videoLocation;
+        $this->cdnVideoLocation        = $cdnVideoLocation;
+        $this->cdnImageLocation        = $cdnImageLocation;
+        $this->cdnImageMembersLocation = $cdnImageMembersLocation;
+        $this->globalPath              = $globalPath;
     }
 
     public function getCssJsLocation()
@@ -66,6 +69,11 @@ class ContentLocation
     public function getCdnImageLocation()
     {
         return $this->cdnImageLocation;
+    }
+
+    public function getCdnImageMembersLocation()
+    {
+        return $this->cdnImageMembersLocation;
     }
 
     public function getGlobalPath()

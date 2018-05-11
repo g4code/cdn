@@ -9,14 +9,15 @@ class ContentMapTest extends PHPUnit_Framework_TestCase
     {
         $this->assertEquals(
             [
-                ContentConstants::CSS_JS_LOCATION           => '/css',
-                ContentConstants::FONT_LOCATION             => '/font',
-                ContentConstants::IMAGE_ICON_LOCATION       => '/image',
-                ContentConstants::IMAGE_USER_LOCATION       => '/profile',
-                ContentConstants::VIDEO_LOCATION            => '/video',
-                ContentConstants::CDN_VIDEO_LOCATION        => '/cdn/video',
-                ContentConstants::CDN_IMAGE_LOCATION        => '/cdn/image',
-                ContentConstants::CDN_GLOBAL_LOCATION       => '/cdn'
+                ContentConstants::CSS_JS_LOCATION            => '/css',
+                ContentConstants::FONT_LOCATION              => '/font',
+                ContentConstants::IMAGE_ICON_LOCATION        => '/image',
+                ContentConstants::IMAGE_USER_LOCATION        => '/profile',
+                ContentConstants::VIDEO_LOCATION             => '/video',
+                ContentConstants::CDN_VIDEO_LOCATION         => '/cdn/video',
+                ContentConstants::CDN_IMAGE_LOCATION         => '/cdn/image',
+                ContentConstants::CDN_IMAGE_MEMBERS_LOCATION => '/cdn/image/members',
+                ContentConstants::CDN_GLOBAL_LOCATION        => '/cdn'
             ],
             \G4\Cdn\ContentMap::getMap($this->contentLocationMock())
         );
@@ -34,6 +35,7 @@ class ContentMapTest extends PHPUnit_Framework_TestCase
         $mock->expects($this->once())->method('getVideoLocation')->willReturn('/video');
         $mock->expects($this->once())->method('getCdnVideoLocation')->willReturn('/cdn/video');
         $mock->expects($this->once())->method('getCdnImageLocation')->willReturn('/cdn/image');
+        $mock->expects($this->once())->method('getCdnImageMembersLocation')->willReturn('/cdn/image/members');
         $mock->expects($this->once())->method('getGlobalPath')->willReturn('/cdn');
         return $mock;
     }

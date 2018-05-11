@@ -11,6 +11,7 @@ class ContentConstants
     const IMAGE_USER_LOCATION       = 'content_image_user_location';
     const VIDEO_LOCATION            = 'content_video_location';
     const CDN_IMAGE_LOCATION        = 'content_cdn_image_location';
+    const CDN_IMAGE_MEMBERS_LOCATION = 'content_cdn_image_members_location';
     const CDN_VIDEO_LOCATION        = 'content_cdn_video_location';
     const CDN_GLOBAL_LOCATION       = 'content_cdn_global_path';
 

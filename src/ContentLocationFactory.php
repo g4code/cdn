@@ -15,6 +15,7 @@ class ContentLocationFactory
             self::getData($data, ContentConstants::VIDEO_LOCATION),
             self::getData($data, ContentConstants::CDN_VIDEO_LOCATION),
             self::getData($data, ContentConstants::CDN_IMAGE_LOCATION),
+            self::getData($data, ContentConstants::CDN_IMAGE_MEMBERS_LOCATION),
             self::getData($data, ContentConstants::CDN_GLOBAL_LOCATION)
         );
     }
